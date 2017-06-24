@@ -96,6 +96,8 @@ sqlplus user/pass@MYDB
 * `cd $INSTANT_CLIENT_LIB_PATH`
 * `ln -s libocci.dylib.12.1  libocci.dylib`
 * `ln -s libclntsh.dylib.12.1 libclntsh.dylib`
+* `ln -s libnnz12.dylib libnnz.dylib`
+* `ln -s libnnz12.dylib libnnz11.dylib`
 
 ## if you have problem with `event.h` run:
 `xcode-select --install`
