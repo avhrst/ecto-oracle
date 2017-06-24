@@ -40,14 +40,38 @@ Download appropriate version from Oracle and unzip. [link](http://www.oracle.com
     ln -s /Applications/oracle/product/instantclient_64/12.1.0.2.0/share/instantclient/ instantclient
 ```
 ### ~/.bash_profile
-```export ORACLE_BASE=/Applications/oracle
-    export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
-    export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
-    export TNS_ADMIN=$ORACLE_BASE/admin/network
-    export export NLS_LANG="AMERICAN_AMERICA.UTF8"    
+``` 
+# Oracle
+export ORACLE_BASE=/Applications/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
+export PATH=$ORACLE_HOME/bin:$PATH
+export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+export TNS_ADMIN=$ORACLE_HOME/admin/network
+export export NLS_LANG="AMERICAN_AMERICA.UTF8"    
 ```    
+Load setting
+```
+source ~/.bash_profile
+```
 ### TNS
-
+```
+nano $TNS_ADMIN/tnsnames.ora
+```
+tnsnames.ora
+```
+MYDB=
+(DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=*********)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SERVER=dedicated)
+      (SID=MYDB-SID)
+    )  
+)
+```
 
 
 ## Database
