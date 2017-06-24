@@ -89,7 +89,7 @@ sqlplus user/pass@MYDB
 
 `cd $ORACLE_HOME/lib`
 
-`ln -s {libclntsh.dylib.12.1,libnnz11.dylib,libociei.dylib} /usr/local/lib`
+`ln -s {libclntsh.dylib.12.1,libnnz12.dylib,libociei.dylib} /usr/local/lib`
 
 ### Compile issues:
 * `brew install libevent`
