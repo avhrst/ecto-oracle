@@ -3,12 +3,14 @@
 
 ## Install OSX
 ## Instant Client
-1. Download appropriate version from Oracle and unzip. [link](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html)
+Download appropriate version from Oracle and unzip. [link](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html)
+
+1. ```
+    unzip -qq instantclient-basic-macos.x64-12.1.0.2.0.zip
+    unzip -qq instantclient-sqlplus-macos.x64-12.1.0.2.0.zip
+    unzip -qq instantclient-tools-macos.x64-12.1.0.2.0.zip
+    unzip instantclient-sdk-macos.x64-12.1.0.2.0.zip
 ```
-unzip -qq instantclient-basic-macos.x64-12.1.0.2.0.zip
-unzip -qq instantclient-sqlplus-macos.x64-12.1.0.2.0.zip
-unzip -qq instantclient-tools-macos.x64-12.1.0.2.0.zip
-unzip instantclient-sdk-macos.x64-12.1.0.2.0.zip
 
 2. ```    
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/bin  
@@ -16,6 +18,7 @@ unzip instantclient-sdk-macos.x64-12.1.0.2.0.zip
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib  
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/dbms/jlib  
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admin  
+
 3. ```
     mv ojdbc* /Applications/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib/
     mv x*.jar /Applications/oracle/product/instantclient_64/12.1.0.2.0/rdbms/jlib/
