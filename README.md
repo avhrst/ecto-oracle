@@ -103,7 +103,7 @@ sqlplus user/pass@MYDB
 `xcode-select --install`
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+  `mix deps.get`
 
   1. Add ecto_oracle_adapter to your list of dependencies in `mix.exs`:
 
