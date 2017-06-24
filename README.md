@@ -93,7 +93,7 @@ sqlplus user/pass@MYDB
 
 ### Compile issues:
 * `brew install libevent`
-* `cd usr/local/Oracle/product/instantclient/11.2.0.4.0/lib/`
+* `cd $INSTANT_CLIENT_LIB_PATH`
 * `ln -s libocci.dylib.11.1  libocci.dylib`
 * `ln -s libclntsh.dylib.11.1 libclntsh.dylib`
 
