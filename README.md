@@ -17,7 +17,8 @@ Download appropriate version from Oracle and unzip. [link](http://www.oracle.com
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/rdbms/jlib/
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/dbms/jlib  
-    mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admin  
+    mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admin
+    mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/network/admin
 
 3. 
    cd instantclient_12_1
@@ -46,7 +47,7 @@ export ORACLE_BASE=/Applications/oracle
 export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
 export PATH=$ORACLE_HOME/bin:$PATH
 export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
-export TNS_ADMIN=$ORACLE_HOME/admin/network
+export TNS_ADMIN=$ORACLE_HOME/network/admin
 export export NLS_LANG="AMERICAN_AMERICA.UTF8"    
 ```    
 Load setting
@@ -71,6 +72,10 @@ MYDB=
       (SID=MYDB-SID)
     )  
 )
+```
+### Test client instalation
+```
+sqlplus user/pass@MYDB
 ```
 
 
