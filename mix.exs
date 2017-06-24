@@ -1,7 +1,7 @@
 defmodule EctoOracleAdapter.Mixfile do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
   @adapters [:oracle]
 
   def project do
@@ -10,14 +10,15 @@ defmodule EctoOracleAdapter.Mixfile do
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description(),
+     package: package(),
      deps: deps,
-
+     name: "EctoOracleAdapter",
+     source_url: "https://github.com/avhrst/ecto-oracle.git",
      test_paths: test_paths(Mix.env),
-
      aliases: ["test.all": ["test", "test.adapters"],
                "test.adapters": &test_adapters/1],
-
-     preferred_cli_env: ["test.all": :test],
+     preferred_cli_env: ["test.all": :test]
 
    ]
   end
@@ -30,9 +31,28 @@ defmodule EctoOracleAdapter.Mixfile do
   defp test_paths(_), do: ["test"]
 
   defp deps do
-    [{:erloci, git: "git://github.com/K2InformaticsGmbH/erloci.git"},
+    [{:ex_doc, "~> 0.11", only: :dev},
+      {:erloci, git: "git://github.com/K2InformaticsGmbH/erloci.git"},
       {:ecto, git: "git://github.com/elixir-lang/ecto.git"}]
   end
+
+defp description do
+    """
+    Oracle Adapter for Ecto
+    """
+  end
+
+defp package do
+    # These are the default files included in the package
+    [
+      name: :ecto_oracle_adapter,
+      files: ["lib",  "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["API Hogs company", "Apex.rest company"],
+      licenses: ["The MIT License (MIT)"],
+      links: %{"GitHub" => "https://github.com/avhrst/ecto-oracle.git"}
+    ]
+  end
+
 
   defp test_adapters(args) do
     for env <- @adapters, do: env_run(env, args)
