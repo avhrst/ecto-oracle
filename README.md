@@ -14,16 +14,19 @@ Download appropriate version from Oracle and unzip. [link](http://www.oracle.com
 2.     
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/bin  
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/lib  
-    mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib  
+    mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib
+    mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/rdbms/jlib/
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/dbms/jlib  
     mkdir -p /Applications/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admin  
 
 3. 
-    mv ojdbc* /Applications/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib/
+   cd instantclient_12_1
+   mv ojdbc* /Applications/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib/
     mv x*.jar /Applications/oracle/product/instantclient_64/12.1.0.2.0/rdbms/jlib/
     mv glogin.sql /Applications/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admin/
     mv *dylib* /Applications/oracle/product/instantclient_64/12.1.0.2.0/lib/ 
     mv *README /Applications/oracle/product/instantclient_64/12.1.0.2.0/
+    mv sdk /Applications/oracle/product/instantclient_64/12.1.0.2.0/sdk
     mv * /Applications/oracle/product/instantclient_64/12.1.0.2.0/bin/
 
 4. 
