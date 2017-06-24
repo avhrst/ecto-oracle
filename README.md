@@ -38,17 +38,13 @@ Download appropriate version from Oracle and unzip. [link](http://www.oracle.com
     mkdir -p share/instantclient
     cd /usr/local/share
     ln -s /Applications/oracle/product/instantclient_64/12.1.0.2.0/share/instantclient/ instantclient
-
-6. 
-    echo "export ORACLE_BASE=/Applications/oracle \
-          export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0 \
-          export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib \
-          export TNS_ADMIN=$ORACLE_BASE/admin/network \
-          export export NLS_LANG=\"AMERICAN_AMERICA.UTF8\" " >> /usr/local/share/instantclient/instantclient.sh 
-    
-7.  
-    echo "source /usr/local/share/instantclient/instantclient.sh" >> ~/.bash_profile
-    source ~/.bash_profile
+```
+### ~/.bash_profile
+```export ORACLE_BASE=/Applications/oracle
+    export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
+    export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+    export TNS_ADMIN=$ORACLE_BASE/admin/network
+    export export NLS_LANG="AMERICAN_AMERICA.UTF8"    
 ```    
 ### TNS
 
