@@ -55,7 +55,7 @@ export OCI_INC_DIR=$ORACLE_HOME/sdk/include
 export INSTANT_CLIENT_LIB_PATH=$ORACLE_HOME/lib
 export INSTANT_CLIENT_INCLUDE_PATH=$ORACLE_HOME/sdk/include
 # Erlang 
-export ERL_INTERFACE_DIR=/usr/local/lib/erlang/lib/erl_interface-3.8
+export ERL_INTERFACE_DIR=/usr/local/lib/erlang/lib/erl_interface-3.9.3
 ```    
 Load setting
 ```
