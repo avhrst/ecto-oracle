@@ -89,13 +89,13 @@ sqlplus user/pass@MYDB
 
 `cd $ORACLE_HOME/lib`
 
-`ln -s {libclntsh.dylib.11.1,libnnz11.dylib,libociei.dylib} /usr/local/lib`
+`ln -s {libclntsh.dylib.12.1,libnnz11.dylib,libociei.dylib} /usr/local/lib`
 
 ### Compile issues:
 * `brew install libevent`
 * `cd $INSTANT_CLIENT_LIB_PATH`
-* `ln -s libocci.dylib.11.1  libocci.dylib`
-* `ln -s libclntsh.dylib.11.1 libclntsh.dylib`
+* `ln -s libocci.dylib.12.1  libocci.dylib`
+* `ln -s libclntsh.dylib.12.1 libclntsh.dylib`
 
 ## if you have problem with `event.h` run:
 `xcode-select --install`
