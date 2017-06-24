@@ -1,7 +1,11 @@
 # EctoOracleAdapter
 
-## Install: (https://github.com/api-hogs/ecto-oracle/wiki/Installation-of-Oracle-on-OSX)
-**TODO: Add description**
+
+## Install OSX
+
+
+
+
 
 ## Installation
 
