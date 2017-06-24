@@ -88,6 +88,7 @@ sqlplus user/pass@MYDB
 ## Driver dependencies
 
 `cd $ORACLE_HOME/lib`
+
 `ln -s {libclntsh.dylib.11.1,libnnz11.dylib,libociei.dylib} /usr/local/lib`
 
 ### Compile issues:
