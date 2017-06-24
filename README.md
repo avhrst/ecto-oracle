@@ -48,7 +48,14 @@ export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
 export PATH=$ORACLE_HOME/bin:$PATH
 export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
 export TNS_ADMIN=$ORACLE_HOME/network/admin
-export export NLS_LANG="AMERICAN_AMERICA.UTF8"    
+export export NLS_LANG="AMERICAN_AMERICA.UTF8"
+# Oracle SDK
+export OCI_LIB_DIR=$ORACLE_HOME/lib
+export OCI_INC_DIR=$ORACLE_HOME/sdk/include
+export INSTANT_CLIENT_LIB_PATH=$ORACLE_HOME/lib
+export INSTANT_CLIENT_INCLUDE_PATH=$ORACLE_HOME/sdk/include
+# Erlang 
+export ERL_INTERFACE_DIR=/usr/local/lib/erlang/lib/erl_interface-3.8
 ```    
 Load setting
 ```
@@ -78,35 +85,12 @@ MYDB=
 sqlplus user/pass@MYDB
 ```
 
-
-## Database
-
-For database installation we recommend to use some of docker's image available.
-
 ## Driver dependencies
 
-1. Download Oracle SDK [link](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html)
-2. move `sdk` to $ORACLE_HOME
-
-3. ```
-       echo "export OCI_LIB_DIR=$ORACLE_HOME/lib
-          export OCI_INC_DIR=$ORACLE_HOME/sdk/include" >> /usr/local/share/instantclient/instantclient.sh 
-
-4. `cd $ORACLE_HOME/lib`
-5. `ln -s {libclntsh.dylib.11.1,libnnz11.dylib,libociei.dylib} /usr/local/lib`
-
-6. ```
-     echo "export INSTANT_CLIENT_LIB_PATH=$ORACLE_HOME/lib
-           export INSTANT_CLIENT_INCLUDE_PATH=$ORACLE_HOME/sdk/include" >> ~/.zshrc 
+`cd $ORACLE_HOME/lib`
+`ln -s {libclntsh.dylib.11.1,libnnz11.dylib,libociei.dylib} /usr/local/lib`
 
 ### Compile issues:
-Check your .zshrc:
-```
-export INSTANT_CLIENT_LIB_PATH=/usr/local/Oracle/product/instantclient/11.2.0.4.0/lib
-export INSTANT_CLIENT_INCLUDE_PATH=/usr/local/Oracle/product/instantclient/11.2.0.4.0/sdk/include
-export OCI_INCLUDE_DIR=/usr/local/Oracle/product/instantclient/11.2.0.4.0/sdk/include
-export ERL_INTERFACE_DIR=/usr/local/lib/erlang/lib/erl_interface-3.8
-```
 * `brew install libevent`
 * `cd usr/local/Oracle/product/instantclient/11.2.0.4.0/lib/`
 * `ln -s libocci.dylib.11.1  libocci.dylib`
